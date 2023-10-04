@@ -1,0 +1,11 @@
+table:
+  name: tournaments
+  schema: public
+array_relationships:
+  - name: matches
+    using:
+      foreign_key_constraint_on:
+        column: tournament_id
+        table:
+          name: matches
+          schema: public

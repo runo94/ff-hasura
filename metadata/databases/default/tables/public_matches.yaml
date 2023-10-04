@@ -1,0 +1,24 @@
+table:
+  name: matches
+  schema: public
+object_relationships:
+  - name: teamByGTeamId
+    using:
+      foreign_key_constraint_on: g_team_id
+  - name: teamByHTeamId
+    using:
+      foreign_key_constraint_on: h_team_id
+  - name: teamByWTeamId
+    using:
+      foreign_key_constraint_on: w_team_id
+  - name: tournament
+    using:
+      foreign_key_constraint_on: tournament_id
+array_relationships:
+  - name: squad_matches
+    using:
+      foreign_key_constraint_on:
+        column: match_id
+        table:
+          name: squad_match
+          schema: public

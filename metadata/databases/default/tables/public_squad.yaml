@@ -1,0 +1,29 @@
+table:
+  name: squad
+  schema: public
+object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: captain_id
+array_relationships:
+  - name: squad_matches
+    using:
+      foreign_key_constraint_on:
+        column: squad_id
+        table:
+          name: squad_match
+          schema: public
+  - name: squad_teams
+    using:
+      foreign_key_constraint_on:
+        column: squad_id
+        table:
+          name: squad_team
+          schema: public
+  - name: squad_users
+    using:
+      foreign_key_constraint_on:
+        column: squad_id
+        table:
+          name: squad_user
+          schema: public

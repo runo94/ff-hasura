@@ -1,0 +1,36 @@
+table:
+  name: teams
+  schema: public
+object_relationships:
+  - name: user
+    using:
+      foreign_key_constraint_on: manager_id
+array_relationships:
+  - name: matches
+    using:
+      foreign_key_constraint_on:
+        column: g_team_id
+        table:
+          name: matches
+          schema: public
+  - name: matchesByHTeamId
+    using:
+      foreign_key_constraint_on:
+        column: h_team_id
+        table:
+          name: matches
+          schema: public
+  - name: matchesByWTeamId
+    using:
+      foreign_key_constraint_on:
+        column: w_team_id
+        table:
+          name: matches
+          schema: public
+  - name: squad_teams
+    using:
+      foreign_key_constraint_on:
+        column: team_id
+        table:
+          name: squad_team
+          schema: public

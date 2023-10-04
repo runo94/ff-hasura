@@ -1,0 +1,10 @@
+table:
+  name: squad_match
+  schema: public
+object_relationships:
+  - name: match
+    using:
+      foreign_key_constraint_on: match_id
+  - name: squad
+    using:
+      foreign_key_constraint_on: squad_id
