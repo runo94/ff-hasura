@@ -3,6 +3,7 @@
 - "!include public_squad_match.yaml"
 - "!include public_squad_team.yaml"
 - "!include public_squad_user.yaml"
+- "!include public_team_user.yaml"
 - "!include public_teams.yaml"
 - "!include public_tournaments.yaml"
 - "!include public_users.yaml"

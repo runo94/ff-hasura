@@ -16,6 +16,13 @@ array_relationships:
         table:
           name: squad
           schema: public
+  - name: team_users
+    using:
+      foreign_key_constraint_on:
+        column: user_id
+        table:
+          name: team_user
+          schema: public
   - name: teams
     using:
       foreign_key_constraint_on:

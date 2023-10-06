@@ -34,3 +34,10 @@ array_relationships:
         table:
           name: squad_team
           schema: public
+  - name: team_users
+    using:
+      foreign_key_constraint_on:
+        column: team_id
+        table:
+          name: team_user
+          schema: public

@@ -1,0 +1,1 @@
+CREATE TABLE "public"."teams_user" ("team_id" uuid NOT NULL, "user_id" uuid NOT NULL, PRIMARY KEY ("team_id") , FOREIGN KEY ("team_id") REFERENCES "public"."teams"("id") ON UPDATE no action ON DELETE no action, FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON UPDATE no action ON DELETE no action);
